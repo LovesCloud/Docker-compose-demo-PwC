@@ -1,0 +1,19 @@
+version: '3'
+services:
+  backend:
+    build: ./python/
+    ports:
+     - "5000"
+    links:
+      - redis
+  frontend:
+    build: ./ui/
+    ports:
+     - "80"
+     - "443"
+    links:
+     - backend      
+  redis:
+    image: "redis:alpine"
+    ports:
+     - "6379"
