@@ -48,7 +48,7 @@ node{
             }
   }
    stage('Exposing Frontend'){        
-            def kubectl= "kubectl expose deployment frontend --type=LoadBalancer --name=frontend"      
+            def kubectl= "kubectl expose deployment frontend --type=LoadBalancer --name=frontend1"      
             sshagent(['k8_master']) {
               sh "ssh -o StrictHostKeyChecking=no admin@54.236.63.5 ${kubectl}"              
             }
