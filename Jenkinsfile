@@ -28,6 +28,7 @@ node{
             }
   }
   stage('Exposing Frontend'){        
+            def ip="`curl http://169.254.169.254/latest/meta-data/public-ipv4`"
             def kubectl= "sudo kubectl expose deployment frontend --type=LoadBalancer --name=frontend1"      
             sshagent(['k8_master']) {
               sh "ssh -o StrictHostKeyChecking=no devops@$ip ${kubectl}"              
