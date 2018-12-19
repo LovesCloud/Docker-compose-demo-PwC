@@ -7,7 +7,7 @@ services:
     links:
       - redis
   frontend:
-    image: asyed755/composetest_frontend:v1
+    image: asyed755/composetest_frontend:v2
     ports:
      - "80:80"
     links:
