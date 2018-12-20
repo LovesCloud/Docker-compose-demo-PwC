@@ -18,7 +18,7 @@ node{
               sh "ssh -o StrictHostKeyChecking=no devops@$ip ${kompose}"
             }
    }
-  stage('Deploy'){
+  stage('Backend-Deployment'){
             def ip="`curl http://169.254.169.254/latest/meta-data/public-ipv4`"
             def kubectl_redis_frontend= "sudo kubectl create -f /home/devops/redis-deployment.yaml"   
             def kubectl_redis_service= "sudo kubectl create -f /home/devops/redis-service.yaml"
