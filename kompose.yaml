@@ -1,18 +1,18 @@
 version: '3'
 services:
   backend:
-    image: asyed755/composetest_backend
+    image: <docker-hub-account-id>/<repo-name>:<tag>
     ports:
      - "5000"
     links:
       - redis
   frontend:
-    image: asyed755/composetest_frontend:latest
+    image: <docker-hub-account-id>/<repo-name>:<tag>
     ports:
      - "80:80"
     links:
-     - backend
+     - backend      
   redis:
-    image: "redis:alpine"
+    image: <docker-hub-account-id>/<repo-name>:<tag>
     ports:
      - "6379"
