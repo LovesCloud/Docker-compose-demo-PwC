@@ -23,9 +23,10 @@
 	  max-width: 100%;
 	  min-height: 20%;
 	  min-width: 30%;
-	  background-image: url("pwc-banner.PNG");
-	background-size: contain;
-	background-repeat:no-repeat;
+	  background-image: url("banner.PNG");
+	  background-size: contain;
+	  background-repeat:no-repeat;
+	  background-position: center;
 	}
 	.banner-simpli {
 	  height: 400px;
@@ -47,6 +48,11 @@
     width: max-content!important;
     border-top-left-radius: calc(.25rem - 1px);
     border-top-right-radius: calc(.25rem - 1px);
+}
+@media (min-width: 576px){
+.jumbotron {
+    padding: 1rem 1rem!important;
+}
 }
 	
 	</style>
@@ -76,7 +82,7 @@
       <div class="navbar navbar-dark bg-dark box-shadow" style=" background-color:#f2f2f2!important;">
         <div class="container d-flex justify-content-between">
           <a href="#" class="navbar-brand d-flex align-items-center">
-			<img src="logo.png" width="100px;" height="100px;">
+			<img src="logo.png" >
 		  
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
